@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Vida Sana</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1 class="logo-container">
+        <img src="img/logocorto.png" alt="Vida Sana" class="logo-navbar">Vida Sana
+    </h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="Doctores.html">Médicos</a>
+        <a href="citas.html">Citas</a>
+    </nav>
+</header>
+
+<section class="hero"> <img src="img/logo-vida-sana.png" alt="Hospital Vida Sana" class="logo">
+    <h2>Atención médica de calidad</h2>
+    <p>Especialistas certificados y tecnología moderna</p>
+    <a href="citas.html" class="btn">Agendar cita</a>
+</section>
+
+ <section class="info-section">
+  <div class="container">
+
+    <div class="card historia">
+      <h2>Historia</h2>
+      <p>
+        Fundado en el año 2000, nuestro hospital ha brindado servicio de calidad en el cuidado de la salud a miles de pacientes.
+        Con un equipo humano comprometido y tecnología de punta, Vida Sana se ha consolidado como referente en atención médica en la región.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Misión</h2>
+        <p>
+          Brindar atención médica de calidad, humana y oportuna a todos nuestros pacientes.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Visión</h2>
+        <p>
+          Ser una institución líder en servicios de salud, con compromiso social y tecnología avanzada.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <img src="img/cardio.jpg">
+        <h3>Especialidades</h3>
+        <p>Áreas médicas completas</p>
+        <a href="especialidades.html">Ver más</a>
+    </div>
+
+    <div class="card">
+        <img src="img/doctor1.jpg">
+        <h3>Médicos</h3>
+        <p>Profesionales certificados</p>
+        <a href="Doctores.html">Ver médicos</a>
+    </div>
+
+    <div class="card">
+        <img src="img/hospital.jpg">
+        <h3>Expediente</h3>
+        <p>Registro clínico digital</p>
+        <a href="Expedientes.html">Crear</a>
+    </div>
+
+</section>
+
+<section class="historia">
+  <h2>Nuestra Historia</h2>
+
+  <div class="horizontal-carousel">
+    <div class="carousel-track">
+
+      <!-- ORIGINAL -->
+      <div class="card-historia">
+        <div class="icon">🏥</div>
+        <h3>1986</h3>
+        <p>Hospital Ciudad Satélite, S.A. de C.V.</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">👨‍⚕️</div>
+        <h3>1993</h3>
+        <p>Sociedad Médica del Corporativo Hospital Satélite A.C</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">👥</div>
+        <h3>1996</h3>
+        <p>Sociedades Médicas de Hospitales Privados.</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">🏥</div>
+        <h3>1998</h3>
+        <p>Corporativo Hospital Satélite S.A. de C.V.</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">💻</div>
+        <h3>2005</h3>
+        <p>Sistema digital hospitalario.</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">🧬</div>
+        <h3>2010</h3>
+        <p>Modernización tecnológica médica.</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">🌐</div>
+        <h3>2015</h3>
+        <p>Servicios en línea para pacientes.</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">🚀</div>
+        <h3>2020</h3>
+        <p>Expansión y nuevas especialidades.</p>
+      </div>
+
+      <!-- DUPLICADO (loop infinito) -->
+      <div class="card-historia">
+        <div class="icon">🏥</div>
+        <h3>1986</h3>
+        <p>Hospital Ciudad Satélite, S.A. de C.V.</p>
+      </div>
+
+      <div class="card-historia">
+        <div class="icon">👨‍⚕️</div>
+        <h3>1993</h3>
+        <p>Sociedad Médica del Corporativo Hospital Satélite A.C</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="carousel-historia.js"></script>
+<section class="reviews">
+  <h2>Lo que dicen nuestros pacientes</h2>
+
+  <div class="reviews-container">
+
+    <div class="review">
+      <p>"Excelente atención, los médicos muy profesionales."</p>
+      <h4>⭐⭐⭐⭐⭐</h4>
+      <span>- María López</span>
+    </div>
+
+    <div class="review">
+      <p>"Instalaciones modernas y servicio rápido."</p>
+      <h4>⭐⭐⭐⭐⭐</h4>
+      <span>- Carlos Ramírez</span>
+    </div>
+
+    <div class="review">
+      <p>"Me sentí muy seguro durante todo el tratamiento."</p>
+      <h4>⭐⭐⭐⭐</h4>
+      <span>- Ana Torres</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h3>+25</h3>
+    <p>Años de experiencia</p>
+  </div>
+
+  <div class="stat">
+    <h3>+10,000</h3>
+    <p>Pacientes atendidos</p>
+  </div>
+
+  <div class="stat">
+    <h3>+120</h3>
+    <p>Médicos especialistas</p>
+  </div>
+
+  <div class="stat">
+    <h3>24/7</h3>
+    <p>Atención continua</p>
+  </div>
+</section>
+
+
+
+</body>
+</html>

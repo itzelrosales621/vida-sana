@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Agendar Cita Médica</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1 class="logo-container">
+        <img src="img/logocorto.png" alt="Vida Sana" class="logo-navbar">Vida Sana
+    </h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="Doctores.html">Médicos</a>
+        <a href="citas.html">Citas</a>
+    </nav>
+</header>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f4f7fb;
+}
+
+.navbar {
+    background: #0a3d62;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row input, .row select {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #dff0ff;
+    color: #0a3d62;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.logo-navbar {
+    width: 40px; /* ajusta tamaño */
+    height: 40px;
+    object-fit: contain;
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <h2>Agendar Cita Médica</h2>
+    <div class="badge">Sistema de atención hospitalaria</div>
+
+    <form id="formCita">
+
+        <div class="section">
+            <label>Nombre del paciente</label>
+            <input type="text" id="nombre" required>
+
+            <label>Edad</label>
+            <input type="number" id="edad" required>
+
+            <label>Teléfono</label>
+            <input type="tel" id="telefono">
+        </div>
+
+        <div class="section">
+            <label>Especialidad</label>
+            <select id="especialidad" required>
+                <option value="">Seleccionar</option>
+                <option>Cardiología</option>
+                <option>Pediatría</option>
+                <option>Traumatología</option>
+                <option>Dermatología</option>
+                <option>Medicina General</option>
+            </select>
+
+            <label>Médico disponible</label>
+            <select id="medico">
+                <option>Seleccione especialidad primero</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label>Fecha de cita</label>
+            <input type="date" id="fecha" required>
+
+            <label>Hora</label>
+            <input type="time" id="hora" required>
+        </div>
+
+        <div class="section">
+            <label>Motivo de consulta</label>
+            <textarea id="motivo" rows="3" placeholder="Describe el problema del paciente"></textarea>
+        </div>
+
+        <button type="submit">Confirmar Cita</button>
+    </form>
+</div>
+
+<script>
+const medicos = {
+    "Cardiología": ["Dr. Juan Pérez", "Dra. Ana López"],
+    "Pediatría": ["Dra. María Torres", "Dr. Carlos Ruiz"],
+    "Traumatología": ["Dr. Luis Gómez"],
+    "Dermatología": ["Dra. Sofía Ramírez"],
+    "Medicina General": ["Dr. José Hernández"]
+};
+
+document.getElementById("especialidad").addEventListener("change", function () {
+    const especialidad = this.value;
+    const medicoSelect = document.getElementById("medico");
+
+    medicoSelect.innerHTML = "";
+
+    if (medicos[especialidad]) {
+        medicos[especialidad].forEach(m => {
+            let option = document.createElement("option");
+            option.textContent = m;
+            medicoSelect.appendChild(option);
+        });
+    } else {
+        medicoSelect.innerHTML = "<option>Sin médicos disponibles</option>";
+    }
+});
+
+document.getElementById("formCita").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    alert("✅ Cita registrada correctamente");
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
